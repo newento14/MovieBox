@@ -5,7 +5,7 @@ const watchListRouter = require('./watchListRouter');
 const filmWatchedRouter = require('./filmWatchedRouter')
 
 router.use('/user', userRouter);
-router.use('/watchList', watchListRouter);
+router.use('/watchlist', watchListRouter);
 router.use('/films', filmWatchedRouter);
 
 module.exports = router;

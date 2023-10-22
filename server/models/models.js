@@ -3,9 +3,10 @@ const {DataTypes} = require('sequelize');
 
 const User = sequelize.define('user', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    username: {type: DataTypes.STRING, maxLength: 64},
+    username: {type: DataTypes.STRING, maxLength: 64, unique: true},
     email: {type: DataTypes.STRING, unique: true},
     password: {type: DataTypes.STRING, maxLength: 64},
+    avatar: {type: DataTypes.STRING},
 })
 
 const Token = sequelize.define('token', {
@@ -21,9 +22,11 @@ const WatchList = sequelize.define('watch_list', {
 
 const FilmsWatched = sequelize.define('films_watched', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    rating: {type: DataTypes.INTEGER},
+    rating: {type: DataTypes.DECIMAL, defaultValue: 5},
+    favourite: {type: DataTypes.BOOLEAN, defaultValue: false},
+    comment: {type: DataTypes.STRING, defaultValue: ""},
     filmName: {type: DataTypes.STRING},
-    filmPicture: {type: DataTypes.STRING},
+    filmPicture: {type: DataTypes.STRING, defaultValue: ""},
     filmYear: {type: DataTypes.INTEGER},
 })
 

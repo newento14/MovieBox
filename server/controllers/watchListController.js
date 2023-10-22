@@ -17,6 +17,7 @@ class WatchListController {
         try {
             const {id} = req.query;
             const userId = req.user.id;
+            console.log(id, )
             const data = await watchListService.deleteFilm(id, userId);
             return res.json(data);
         } catch (e) {

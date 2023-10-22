@@ -9,6 +9,10 @@ module.exports = class ServerError extends Error{
         this.error = error;
     }
 
+    static NotFound() {
+        return new ServerError(404, "Not found");
+    }
+
     static UnauthorizedError() {
         return new ServerError(401, "User not authorized");
     }

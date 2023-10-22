@@ -4,6 +4,8 @@ const tokenService = require('./tokenService')
 const UserDto = require('../Dtos/userDto')
 const {where} = require("sequelize");
 const serverError = require('../exceptions/server-error')
+const FilmWatchedService = require('../services/filmWatchedService')
+const WatchListService = require('../services/watchListService')
 
 class UserService {
     async registration(username, email, password) {
@@ -68,6 +70,51 @@ class UserService {
         return {...tokens, user: userDto}
     }
 
+    async getUserProfile(username) {
+        const user = await User.findOne({where: {username: username}});
+        if (!user) {
+            throw serverError.NotFound();
+        }
+        const userDto = new UserDto(user);
+        const profileData = await FilmWatchedService.getProfileStats(user.id);
+
+        return {
+            user: userDto,
+            ...profileData,
+        }
+    }
+
+    async getFilmsPage(username) {
+        const user = await User.findOne({where: {username: username}});
+        if (!user) {
+            throw serverError.NotFound();
+        }
+        const userDto = new UserDto(user);
+        const filmCount = await FilmWatchedService.getFilmsCount(user.id);
+        const films = await FilmWatchedService.getAll(user.id);
+
+        return {
+            user: userDto,
+            filmCount,
+            films,
+        }
+    }
+
+    async getWatchListPage(username) {
+        const user = await User.findOne({where: {username: username}});
+        if (!user) {
+            throw serverError.NotFound();
+        }
+        const userDto = new UserDto(user);
+        const filmCount = await FilmWatchedService.getFilmsCount(user.id);
+        const films = await WatchListService.getAll(user.id);
+
+        return {
+            user: userDto,
+            filmCount,
+            films,
+        }
+    }
 }
 
 module.exports = new UserService();

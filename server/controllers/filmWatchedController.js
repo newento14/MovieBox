@@ -4,9 +4,9 @@ const filmWatchedService = require('../services/filmWatchedService')
 class FilmWatchedController {
     async addFilm(req, res, next) {
         try {
-            const {rating, filmName, filmPicture, filmYear } = req.body;
+            console.log(req.body);
             const userId = req.user.id;
-            const data = await filmWatchedService.addFilm(rating, filmName, filmPicture, filmYear, userId);
+            const data = await filmWatchedService.addFilm(req.body, userId);
             return res.json(data);
         } catch (e) {
             next(e);
@@ -36,8 +36,8 @@ class FilmWatchedController {
 
     async updateFilm(req, res, next) {
         try {
-            const {id, rating} = req.query;
-            const data = await filmWatchedService.updateFilm(id,rating);
+            const {id, rating, favourite, comment} = req.body;
+            const data = await filmWatchedService.updateFilm(id, rating, favourite, comment);
             return res.json(data);
         } catch (e) {
             next(e)

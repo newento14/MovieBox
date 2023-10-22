@@ -1,6 +1,8 @@
 const userService = require('../services/userService')
 const {validationResult} = require('express-validator')
 const serverError = require('../exceptions/server-error')
+const uuid = require('uuid')
+const {User} = require("../models/models")
 
 class UserController {
     async registration(req, res, next){
@@ -49,6 +51,70 @@ class UserController {
             const data = await userService.logout(refreshToken)
             res.clearCookie('refreshToken')
             return res.json(data);
+        } catch (e) {
+            next(e);
+        }
+    }
+
+    async getUserProfile(req, res, next) {
+        try {
+            const {userName} = req.query;
+            const data = await userService.getUserProfile(userName);
+            console.log(data);
+            return res.json(data);
+        } catch (e) {
+            next(e);
+        }
+    }
+
+    async getFilmsPage(req, res, next) {
+        try {
+            const {userName} = req.query;
+            const data = await userService.getFilmsPage(userName);
+            console.log(data);
+            return res.json(data);
+
+        } catch (e) {
+            next(e);
+        }
+    }
+
+    async getWatchListPage(req, res, next) {
+        try {
+            const {userName} = req.query;
+            const data = await userService.getWatchListPage(userName)
+            console.log(data);
+            return res.json(data);
+
+        } catch (e) {
+            next(e);
+        }
+    }
+
+    async uploadAvatar(req, res, next) {
+        try {
+            const file = req.files.file;
+            const user = await User.findOne({where: {id: req.user.id}});
+            const name = uuid.v4() + '.jpg';
+            file.mv(process.env.STATIC_PATH + '\\' + name);
+            user.avatar = name;
+            await user.save();
+            return res.json({message: "success"});
+
+        } catch (e) {
+            next(e);
+        }
+    }
+
+    async deleteAvatar(req, res, next) {
+        try {
+            const user = await User.findOne({where: {id: req.user.id}});
+            if (user.avatar !== "") {
+                fs.unlinkSync(process.env.STATIC_PATH + '\\' + user.avatar);
+                user.avatar = "";
+            }
+            return res.status(200);
+
         } catch (e) {
             next(e);
         }

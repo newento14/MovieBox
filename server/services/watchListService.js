@@ -9,7 +9,10 @@ class WatchListService {
     }
 
     async getAll(userId) {
-        const items =  await WatchList.findAll({where: {userId: userId} });
+        const items =  await WatchList.findAll({
+            where: {userId: userId},
+            order: [['createdAt', 'DESC']]
+        });
         return items.map(x => new watchListDto(x));
     }
 
