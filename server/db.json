@@ -890,7 +890,124 @@
             "size": "1080"
           }
         ],
-        "preview": "lalaland-poster.jpeg"
+        "preview": "oppenheimer-poster.jpeg"
+      }
+    },
+    {
+      "id": 14,
+      "slug": "five-nights-at-freddys",
+      "name": "Five Nights at Freddy`s",
+      "type": "movie",
+      "preview": "five-nights-at-freddy-poster.png",
+      "rating": {
+        "count": 5.5,
+        "views": 8120
+      },
+      "categoryId": 8,
+      "year": 2023,
+      "ageLimit": "16+",
+      "shortDesc": "A troubled security guard begins working at Freddy Fazbear's Pizza. During his first night on the job, he realizes that the night shift won't be so easy to get through. Pretty soon he will unveil what actually happened at Freddy's.",
+      "desc": "A troubled security guard begins working at Freddy Fazbear's Pizza. During his first night on the job, he realizes that the night shift won't be so easy to get through. Pretty soon he will unveil what actually happened at Freddy's.",
+      "details": {
+        "createdBy": [
+          "Emma Tammi"
+        ],
+        "starring": [
+          "Josh Hutcherson",
+          "Piper Rubio",
+          "Matthew Lillard"
+        ]
+      },
+      "episode": {
+        "id": 26,
+        "name": "Five Nights at Freddy`s",
+        "timing": "1h 49min",
+        "video": [
+          {
+            "url": "five-nights-at-freddy-poster.png",
+            "type": "video/mp4",
+            "size": "1080"
+          }
+        ],
+        "preview": "five-nights-at-freddy-poster.png"
+      }
+    },
+    {
+      "id": 15,
+      "slug": "inglourious-basterds",
+      "name": "Inglourious Basterds",
+      "type": "movie",
+      "preview": "inglourious-basterds-poster.jpeg",
+      "rating": {
+        "count": 8.7,
+        "views": 15120
+      },
+      "categoryId": 1,
+      "year": 2009,
+      "ageLimit": "18+",
+      "shortDesc": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+      "desc": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+      "details": {
+        "createdBy": [
+          "Quentin Tarantino"
+        ],
+        "starring": [
+          "Brad Pitt",
+          "Mélanie Laurent",
+          "Christoph Waltz"
+        ]
+      },
+      "episode": {
+        "id": 27,
+        "name": "Inglourious Basterds",
+        "timing": "2h 33min",
+        "video": [
+          {
+            "url": "inglourious-basterds-poster.jpeg",
+            "type": "video/mp4",
+            "size": "1080"
+          }
+        ],
+        "preview": "inglourious-basterds-poster.jpeg"
+      }
+    },
+    {
+      "id": 16,
+      "slug": "killers-of-the-flower-moon",
+      "name": "Killers of the Flower Moon",
+      "type": "movie",
+      "preview": "killers-of-the-flower-moon-poster.jpeg",
+      "rating": {
+        "count": 8.0,
+        "views": 7120
+      },
+      "categoryId": 7,
+      "year": 2023,
+      "ageLimit": "16+",
+      "shortDesc": "When oil is discovered in 1920s Oklahoma under Osage Nation land, the Osage people are murdered one by one - until the FBI steps in to unravel the mystery.",
+      "desc": "When oil is discovered in 1920s Oklahoma under Osage Nation land, the Osage people are murdered one by one - until the FBI steps in to unravel the mystery.",
+      "details": {
+        "createdBy": [
+          "Martin Scorsese"
+        ],
+        "starring": [
+          "Eric Roth",
+          "Martin Scorsese",
+          "David Grann"
+        ]
+      },
+      "episode": {
+        "id": 25,
+        "name": "Killers of the Flower Moon",
+        "timing": "3h 26min",
+        "video": [
+          {
+            "url": "killers-of-the-flower-moon-poster.jpeg",
+            "type": "video/mp4",
+            "size": "1080"
+          }
+        ],
+        "preview": "killers-of-the-flower-moon-poster.jpeg"
       }
     }
   ],
@@ -929,6 +1046,11 @@
       "id": 7,
       "name": "Crime",
       "slug": "crime"
+    },
+    {
+      "id": 8,
+      "name": "Horror",
+      "slug": "horror"
     }
   ],
   "users": [

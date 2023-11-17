@@ -8,8 +8,8 @@ export const Home: FC = () => {
     <div className={styles.home}>
       <HeroCarousel
         queryParams={{
-          _limit: 3,
-          _sort: 'rating.views',
+          _limit: 6,
+          _sort: 'year',
           _order: 'desc'
         }}/>
       <Carousel
