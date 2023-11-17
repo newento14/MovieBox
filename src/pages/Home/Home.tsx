@@ -1,29 +1,34 @@
-import { FC } from 'react'
-import { FilmsWithTitle } from '@/components'
+import {FC} from 'react'
 import styles from './home.module.scss'
+import Carousel from "@/components/Carousel/Carousel";
+import HeroCarousel from "@/components/HeroCarousel/HeroCarousel";
 
 export const Home: FC = () => {
   return (
     <div className={styles.home}>
-      
-      <FilmsWithTitle 
+      <HeroCarousel
+        queryParams={{
+          _limit: 3,
+          _sort: 'rating.views',
+          _order: 'desc'
+        }}/>
+      <Carousel
         title='Popular'
         queryParams={{
-          _limit: 5,
+          _limit: 12,
           _sort: 'rating.views',
           _order: 'desc'
         }}
       />
 
-      <FilmsWithTitle 
+      <Carousel
         title='Recommended'
         queryParams={{
-          _limit: 5,
+          _limit: 12,
           _sort: 'rating.count',
           _order: 'desc'
         }}
       />
-
     </div>
   )
 }

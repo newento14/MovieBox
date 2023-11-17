@@ -8,8 +8,6 @@ export {Search} from './Search/Search'
 export {Loader} from './Loader'
 
 export {Film} from './Film/Film'
-export {FilmList} from './FilmList/FilmList'
-export {FilmsWithTitle} from './FilmList/FilmsWithTitle'
 
 export {LoginForm} from './AuthForms/LoginForm'
 export {RegisterForm} from './AuthForms/RegisterForm'

@@ -64,8 +64,8 @@ export const LoginForm: FC = () => {
         </div>
 
         <div className={s.testData}>
-          <span>Login: daniel@gmail.com</span>
-          <span>Password: daniel</span>
+          <span>Login: 123@test.com</span>
+          <span>Password: 123</span>
           <span>Or register</span>
         </div>
       </form>

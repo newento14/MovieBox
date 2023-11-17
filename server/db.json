@@ -747,7 +747,7 @@
       "preview": "drive-poster.webp",
       "rating": {
         "count": 7.8,
-        "views": 3020
+        "views": 9020
       },
       "categoryId": 2,
       "year": 2011,
@@ -786,11 +786,11 @@
       "preview": "bladerunner-poster.jpg",
       "rating": {
         "count": 8.9,
-        "views": 36001
+        "views": 16001
       },
       "categoryId": 4,
       "year": 2018,
-      "ageLimit": "12+",
+      "ageLimit": "16+",
       "shortDesc": "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
       "desc": "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
       "details": {
@@ -825,7 +825,7 @@
       "preview": "lalaland-poster.jpeg",
       "rating": {
         "count": 7.9,
-        "views": 12001
+        "views": 33001
       },
       "categoryId": 2,
       "year": 2016,
@@ -934,11 +934,51 @@
   "users": [
     {
       "id": 1,
-      "fullName": "TEST",
-      "email": "test@test.com",
+      "fullName": "123",
+      "email": "123@test.com",
       "password": "123"
     }
   ],
   "comments": [
+    {
+      "title": "Клас😎",
+      "fullName": "123",
+      "body": "Фільм непоганий, але будемо чесні.. ми тут заради Раяна Гослінга)\n",
+      "userId": 1,
+      "filmId": 9,
+      "id": 1
+    },
+    {
+      "title": "Не сподобадлося🥸",
+      "fullName": "123",
+      "body": "ну таке",
+      "userId": 1,
+      "filmId": 5,
+      "id": 2
+    },
+    {
+      "title": "ВАУ це круто💅",
+      "fullName": "123",
+      "body": "10 з 10, мені дуже сподобадоля",
+      "userId": 1,
+      "filmId": 13,
+      "id": 3
+    },
+    {
+      "title": "ОГО🤯",
+      "fullName": "123",
+      "body": "Дуже атмосферний і емоційний фільм. Сподіваюсь наступна частина буде раніше ніж за 35 років :) Судячи з того що вже третій раз його дивлюсь кожного року - це увійде в особисту класику.",
+      "userId": 1,
+      "filmId": 11,
+      "id": 4
+    },
+    {
+      "title": "he's literally me🤭",
+      "fullName": "123",
+      "body": "Я і не думав що мені може сподобатись мюзикл зазвичай це не моє але цей інший. Красиво підібрані локації для тнцювальних сцен, ткож особисто мій респект за те що показали 2 варіанта розвитку фільму в кінці. В заальному класний фільм, можливо особисто для мене історіїю до 8 не дотягує але декорації топ.",
+      "userId": 1,
+      "filmId": 12,
+      "id": 5
+    }
   ]
 }
