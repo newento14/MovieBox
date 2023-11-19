@@ -7,7 +7,7 @@ export const getFilms = async (params: string = ''): Promise<AxiosResponse<IFilm
 }
 
 export const getFilm = async (slug: string): Promise<AxiosResponse<IFilm[]>> => {
-  return defaultAxios.get<IFilm[]>(`/films/${slug}`)
+  return defaultAxios.get<IFilm[]>(`/api/films/${slug}`)
 }
 
 export const getCategories = async (): Promise<AxiosResponse<ICategory[]>> => {

@@ -22,7 +22,7 @@ export const Sidebar: FC = () => {
     <aside className={styles.sidebar}>
       
       <div className={styles.logo}>
-        <Link to={RouteNames.HOME}>MBox</Link>
+        <Link to={RouteNames.HOME}>MBoxd</Link>
       </div>
 
       <nav className={styles.sidebarMenu}>
