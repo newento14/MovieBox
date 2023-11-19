@@ -12,6 +12,7 @@ export const Home: FC = () => {
           _sort: 'year',
           _order: 'desc'
         }}/>
+
       <Carousel
         title='Popular'
         queryParams={{

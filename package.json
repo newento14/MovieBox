@@ -1,5 +1,5 @@
 {
-  "name": "ramp",
+  "name": "movie-boxd",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,13 +8,13 @@
     "start": "node server/server.js",
     "build": "webpack --mode production",
     "test": "jest --detectOpenHandles",
-    "server": "json-server --watch server/db.json --routes server/routes.json --port 5000"
+    "server": "json-server --watch db.json --routes routes.json --port 9251"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.6.20",
